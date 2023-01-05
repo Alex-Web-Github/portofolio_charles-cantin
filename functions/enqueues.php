@@ -7,9 +7,13 @@ function custom_enqueue_scripts()
   wp_register_style('bootstrap5', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css', false, '5.1.0', null);
   wp_enqueue_style('bootstrap5');
 
+  wp_register_style('bootstrap5-icon', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css', false, '1.10.2', null);
+  wp_enqueue_style('bootstrap5-icon');
+  
   // custom style
   wp_register_style('custom', get_template_directory_uri() . '/css/custom.css', false, '1.0.0', null);
   wp_enqueue_style('custom');
+
 
   // * scripts *
 

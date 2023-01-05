@@ -1,0 +1,100 @@
+/*****  POLICES GOOGLE *****/
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Nova+Mono&display=swap");
+/*****  POLICES GOOGLE *****/
+
+/*****  MEDIA QUERIES *****/
+@media screen and (max-width: 767.98px) { /* voir doc breakpoints MD de Bootstrap */
+  #heroe #main-menu {
+    background-color: rgba(0, 0, 10, 0.7); 
+  }
+  #heroe  {
+    background-position: right;
+  }
+  #main-menu {
+    margin-top: 20px ;
+    padding: 20px 15px;
+  } 
+  .mobile-nav-toggle {
+    display: block;
+    color: whitesmoke;
+  }
+  
+}
+/*****  MEDIA QUERIES *****/
+
+/*****  CUSTOM GLOBAL *****/
+body {
+  font-family: 'lato', sans-serif;
+}
+h1 {
+  text-transform: uppercase;
+  font-family: Nova Mono, monospace;
+}
+h2 {
+  /*text-transform: uppercase;*/
+  font-family: lato, sans-serif;
+  font-weight: 100;
+}
+hr { 
+  width: 5rem;
+  margin: 1rem auto 2rem;
+  border: solid 1px #f0f2a6;
+  opacity: 1;
+}
+/* sur la page d'Accueil */
+.sub-title {            
+  font-size: 1.25rem;
+  line-height: 0.5;
+}
+/* sur la page d'Accueil */
+
+#banner {
+  background-color: #43565f;
+  color: #f5f5f5;
+}
+/*****  CUSTOM GLOBAL *****/
+
+/*****  CUSTOM NAVIGATION *****/
+.mobile-nav-toggle {
+  color: #222222;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+/*****  CUSTOM NAVIGATION *****/
+
+/*****  CUSTOM Page PRESTATION-TARIFS *****/
+.card {
+  box-shadow: 0px 0px 15px  rgba(0, 0, 0, 0.5);
+  border: none;
+}
+.card-footer {
+  background-color: #43565f;
+  color : #fff;
+  border-top: 0;
+  border-radius: 0.25rem;
+}
+.btn-danger {
+  color: #43565F;
+  background-color: #F0F2A6;
+  border-color: #F0F2A6;
+}
+.btn-danger:hover {
+  background-color: #43565F;
+  color: #F0F2A6;
+  border-color: #F0F2A6;
+}
+/*****  CUSTOM Page PRESTATION-TARIFS *****/
+
+/*****  CUSTOM Page CONTACT  *****/
+.img-contact {
+  background-position: center-center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  border-radius: 0.25rem;
+}
+/*****  CUSTOM Page CONTACT  *****/
