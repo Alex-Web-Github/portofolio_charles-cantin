@@ -13,7 +13,7 @@
       background-image:
         linear-gradient(to bottom, rgba(0, 0, 10, 0.4), rgba(0, 0, 10, 0.9)),
         url("<?php echo get_the_post_thumbnail_url('','medium_large'); ?>");
-      background-position: center-center;
+      background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: fixed;

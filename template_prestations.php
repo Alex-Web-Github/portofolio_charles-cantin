@@ -29,14 +29,14 @@
 
             <!-- Affichage des "Prestations" --> 
             <div class="col">
-              <div class="card text-center h-100">
+              <div class="card content-shadow text-center h-100">
                 <div>
                   <img src="<?php echo get_the_post_thumbnail_url('', 'medium_large'); ?>" class="card-img-top"/>
                 </div>
                 <div class="card-body mb-3">
                   <h3 class="card-title fs-4"><?php the_title(); ?></h3>
                   <p class="card-text fw-light">
-                    <?php the_content(); ?>
+                    <?php the_field('prestation_description'); ?>
                   </p>
                 </div> 
                 <div class="d-flex px-1 card-footer align-items-center">
@@ -51,7 +51,7 @@
                     <?php endif; ?>
                   <!-- Boucle IF sur le champs 'prestation_tarif' pour affichage tarif ou "selon devis" -->
                   <div class="col py-2">
-                    <a href="<?php home_url(); ?>/contact" class="btn btn-danger "><?php the_field('prestation_texteBouton'); ?></a>
+                    <a href="<?php echo get_the_permalink(12); ?>/contact" class="btn btn-danger "><?php the_field('prestation_texteBouton'); ?></a>
                   </div>
                 </div>
               </div>
