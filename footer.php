@@ -20,8 +20,6 @@
 </div>
 <!-- affichage du FOOTER -->
 
-<script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.2/dist/index.bundle.min.js"></script>
-
 <?php wp_footer(); ?>
 
 </body>
