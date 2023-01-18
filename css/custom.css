@@ -1,6 +1,44 @@
 /*****  POLICES GOOGLE *****/
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Nova+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Nova+Mono&display=swap");
 /*****  POLICES GOOGLE *****/
+
+/*****  CUSTOM Couleurs BOOTSTRAP  *****/
+:root {
+  --jaune: #F0F2A6;
+  --gris: #43565F;
+  --blanc: #FFFFFF;
+  --blanc2: #F5F5F5;
+}
+.btn-primary {
+  --bs-btn-color: var(--jaune);
+  --bs-btn-bg: var(--gris);
+  --bs-btn-border-color: var(--gris);
+  --bs-btn-hover-color: var(--gris);
+  --bs-btn-hover-bg: var(--jaune);
+  --bs-btn-hover-border-color: var(--gris);
+  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-active-color: var(--jaune);
+  --bs-btn-active-bg: var(--gris);
+  --bs-btn-active-border-color: var(--gris);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #4f4f4f;
+  --bs-btn-disabled-border-color: #343434;
+}
+#prestations .btn-primary {
+  --bs-btn-border-color: var(--jaune);
+  --bs-btn-active-border-color: var(--jaune);
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler {
+  border: 1px solid var(--blanc2);
+  background-color: transparent;
+}
+
+/*****  CUSTOM Couleurs BOOTSTRAP  *****/
 
 /*****  MEDIA QUERIES *****/
 @media screen and (max-width: 767.98px) { /* voir doc breakpoints MD de Bootstrap */
@@ -16,9 +54,11 @@
   } 
   .mobile-nav-toggle {
     display: block;
-    color: whitesmoke;
+    color: #f5f5f5;
   }
-  
+  .filtres {
+    overflow-x: scroll; /* permet de scroller la barre de filtres sur X */
+  }
 }
 /*****  MEDIA QUERIES *****/
 
@@ -27,76 +67,81 @@ body {
   font-family: 'lato', sans-serif;
 }
 h1 {
-  text-transform: uppercase;
   font-family: Nova Mono, monospace;
+  text-transform: uppercase;
+  color: var(--blanc);
 }
-h2 {
-  /*text-transform: uppercase;*/
-  font-family: lato, sans-serif;
+.navbar-nav a>i {
+  font-size: 1.3rem;
+}
+.navbar-nav a>i {
+  color: var(--jaune);
+}
+          /* sur la page d'Accueil */
+#heroe h1, #heroe h2 {
+  color: var(--blanc2);
+  text-transform: capitalize;
+}
+#heroe h2 {            
+  font-size: 1.5rem;
+  line-height: 0.5;
   font-weight: 100;
 }
+#content-heroe h1+span {
+  color: var(--jaune);
+  font-size: 3rem;
+}
+          /* sur la page d'Accueil */
 hr { 
   width: 5rem;
   margin: 1rem auto 2rem;
-  border: solid 1px #f0f2a6;
+  border: solid 1px var(--jaune);
   opacity: 1;
 }
-/* sur la page d'Accueil */
-.sub-title {            
-  font-size: 1.25rem;
-  line-height: 0.5;
-}
-/* sur la page d'Accueil */
-
 #banner {
-  background-color: #43565f;
-  color: #f5f5f5;
+  background-color: var(--gris);
 }
 /*****  CUSTOM GLOBAL *****/
 
-/*****  CUSTOM NAVIGATION *****/
-.mobile-nav-toggle {
-  color: #222222;
-  font-size: 28px;
-  cursor: pointer;
-  display: none;
-  line-height: 0;
-  transition: 0.5s;
+/*****  CUSTOM Page GALERIE *****/
+.list-group-item {
+  color: var(--gris);
+  background-color: var(--jaune);
+  border-color: var(--gris);
+  transition: all 0.3s ease-in-out;
 }
-/*****  CUSTOM NAVIGATION *****/
+.list-group-item:hover {
+  background-color: var(--gris);
+  color: var(--jaune);
+  border-color: var(--gris);
+  cursor: pointer;
+}
+.list-group-item.active {
+  background-color: var(--gris);
+  color: var(--jaune);
+  border-color: var(--gris);
+}
+#portofolio .col {
+  transition: transform 0.3s ease-in-out;
+}
+#portofolio .col:hover {
+  /*box-shadow: 0px 0px 15px  rgba(0, 0, 0, 0.5);*/
+  transform: scale(0.9);
+}
+/*****  CUSTOM Page GALERIE *****/
 
 /*****  CUSTOM Page PRESTATION-TARIFS *****/
 .content-shadow {
-  box-shadow: 0px 0px 15px  rgba(0, 0, 0, 0.5); 
+  box-shadow: 0px 6px 10px  rgba(0, 0, 0, 0.8); 
 }
 .card {
   border: none;
 }
 .card-footer {
-  background-color: #43565f;
-  color : #fff;
+  background-color: var(--gris);
+  color : var(--blanc);
   border-top: 0;
   border-radius: 0.25rem;
 }
-.btn-danger {
-  color: #43565F;
-  background-color: #F0F2A6;
-  border-color: #F0F2A6;
-}
-.btn-danger:hover {
-  background-color: #43565F;
-  color: #F0F2A6;
-  border-color: #F0F2A6;
-}
-/*****  CUSTOM Page PRESTATION-TARIFS *****/
 
-/*****  CUSTOM Page CONTACT  *****/
-.img-contact {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: auto;
-  width: 100%;
-  border-radius: 0.25rem;
-}
-/*****  CUSTOM Page CONTACT  *****/
+/*****  CUSTOM Page PRESTATION-TARIFS *****/
