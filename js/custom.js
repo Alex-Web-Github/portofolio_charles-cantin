@@ -1,10 +1,9 @@
 
-//TODO: 'Améliorer en JS le clic sur le menu mobile et sa fermeture quand on clique à l'extérieur'*/
-
 //Script de filtrage des clichés du portofolio en jQuery
 
-$('.filtres a').click(function(e) {
-  $('.filtres a').removeClass('active');
+$('.filtres li').click(function(e) {
+  e.preventDefault(); // facultatif : pour ne pas afficher de message d'erreur ???
+  $('.filtres li').removeClass('active');
   $(this).addClass('active');
   // on récupère la valeur de l'attribut 'href' du lien 'a' cliqué
   var href = $(this).attr('href');
@@ -18,8 +17,5 @@ $('.filtres a').click(function(e) {
   } else {
     // sinon n'affichez que les clichés dont le 'data-filtre' est égal à la valeur 'href' du bouton cliqué 
     $('.projet[data-filtre="' + filtre + '"]').show();
-  }
-  
-  e.preventDefault(); // facultatif : pour ne pas afficher de message d'erreur ???
-
+  } 
 });
