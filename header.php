@@ -12,8 +12,8 @@
 <body>
   <header>
     <!-- affichage du HEADER -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <div class="container-lg">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark p-2">
+      <div class="container-lg gx-0">
 
         <!-- affichage du LOGO -->
         <a href="<?php echo home_url(); ?>" class="d-flex align-items-center pb-3">
@@ -46,11 +46,11 @@
           <!-- affichage du Social ICONS -->
           <ul class="navbar-nav flex-row">
             <li class="px-2">
-              <a class="text-muted" href="#" target="_blank">
-                <i class="bi bi-instagram" style="font-size: 1.5rem; color: #F0F2A6;"></i></a>
+              <a class="text-muted" href="" target="_blank">
+                <i class="bi bi-instagram"></i></a>
             </li>
             <li class="px-2">
-              <a class="text-muted" href="#" target="_blank"><i class="bi bi-facebook" style="font-size: 1.5rem; color: #F0F2A6;"></i></a>
+              <a class="text-muted" href="" target="_blank"><i class="bi bi-facebook"></i></a>
             </li>
           </ul>
           <!-- affichage du Social ICONS -->
@@ -62,9 +62,9 @@
     </nav>
 
     <!-- affichage de la Bannière -->
-    <section class="container my-2 mt-md-5" id="banner">
+    <section class="container-lg gx-0 my-2 mt-md-5" id="banner">
       <div class="text-center py-4 px-3">
-        <h1 class=" fs-2"><?php the_title(); ?></h1>
+        <h1><?php the_title(); ?></h1>
         <hr>
       </div>
     </section>

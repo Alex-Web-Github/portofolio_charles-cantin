@@ -8,38 +8,37 @@
 <?php get_header(); ?>
 
 <main>
-  <section class="container-lg">
+  <section class="container-lg gx-0">
     <!-- Affichage du CHAPEAU -->
-    <div class="text-center py-5 px-3 mb-md-3">
-      <h2 class="lead"><?php the_field('page_chapeau'); ?></h2>
+    <div class="row text-center px-2 py-5 mb-md-3">
+      <h2 class="col col-md-8 mx-auto lead"><?php the_field('page_chapeau'); ?></h2>
     </div>
     <!-- Affichage du CHAPEAU -->
 
     <!-- Affichage du FILTRE -->
-    <div class="row mb-4 text-center">
-      <div class="col-md-6 btn-group mx-auto filtres" role="group">
-        <!-- le bouton du filtre TOUS -->
-        <a href="#all" class="btn btn-outline-primary active">Tous</a>
-        <!-- le bouton du filtre TOUS -->
-
-        <!-- création des boutons du filtre avec les Taxonomies du CPT Portofolio -->
-        <?php
-        $cats = get_terms(array(
-          'taxonomy' => 'categorie',
-          'hide_empty' => true, // 'false' pour afficher la liste complète même si aucun cliché n'existe dans cette catégorie.
-        ));
-        foreach ($cats as $cat) {
-        ?>
-          <a href="#<?php echo $cat->name; ?>" class="btn btn-outline-primary"><?php echo $cat->name; ?></a>
-        <?php
-        } ?>
-        <!-- création des boutons du filtre avec les Taxonomies du CPT Portofolio -->
-
+    <div class="row mx-0 mb-5 px-2 text-center" id="filter">
+      <div class="col mx-auto filtres" role="group">
+        <ul class="list-group list-group-horizontal">
+          <!-- le bouton du filtre TOUS -->
+          <li href="#all" class="list-group-item flex-fill active">Tous</li>
+          <!-- le bouton du filtre TOUS -->
+          <!-- création des boutons du filtre avec les Taxonomies du CPT Portofolio -->
+          <?php
+          $cats = get_terms(array(
+            'taxonomy' => 'categorie',
+            'hide_empty' => true, // 'false' pour afficher la liste complète même si aucun cliché n'existe dans cette catégorie.
+          ));
+          foreach ($cats as $cat) {
+          ?> 
+          <li href="#<?php echo $cat->name; ?>" class="list-group-item flex-fill" data-bs-toggle="list"><?php echo $cat->name; ?></li>
+          <?php
+          } ?>
+          <!-- création des boutons du filtre avec les Taxonomies du CPT Portofolio -->
+        </ul>
       </div>
     </div>
     <!-- Affichage du FILTRE -->
 
-    <!-- Affichage du CPT 'Portofolio' -->
     <?php
     $args = array(
       'post_type' => 'portofolio',
@@ -49,25 +48,17 @@
     );
     $q = new WP_Query($args);
 
-    // Déclaration de variable facultative 
-    //$terms = get_the_terms($post->ID, 'categorie');
     ?>
-
-    <div class="row mb-4 row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <!-- Affichage du CPT 'Portofolio' -->
+    <div class="row mt-4 mb-5 row-cols-2 row-cols-md-3 g-0" id="portofolio">
       <?php if ($q->have_posts()) : ?>
         <!-- the loop -->
         <?php while ($q->have_posts()) : $q->the_post(); ?>
-          <div class="col">
-
-            <?php 
-            // pour visualiser les données de cette variable
-            // var_dump (get_the_terms($post->ID, 'categorie')[0]); 
-            ?>
-
+          <div class="col p-1">
             <a href="<?php echo get_the_post_thumbnail_url('', 'full'); ?>" 
             data-filtre="<?php echo get_the_terms($post->ID, 'categorie')[0]->name; ?>" 
             class="projet" data-toggle="lightbox" data-gallery="best_of" data-caption="<?php the_field('portofolio_description'); ?>">
-              <img src="<?php echo get_the_post_thumbnail_url('', 'medium_large'); ?>" class="content-shadow rounded-1 img-fluid" />
+              <img src="<?php echo get_the_post_thumbnail_url('', 'medium_large'); ?>"  class="rounded-1 img-fluid" />
             </a>  
           </div>
 
