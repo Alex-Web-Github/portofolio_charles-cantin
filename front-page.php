@@ -27,8 +27,7 @@
     <!-- affichage du HEADER -->
     <header>
       <nav class="navbar navbar-expand-md navbar-dark">
-        <div class="container-lg gx-0">
-
+        <div class="container-lg">
           <!-- affichage du LOGO -->
           <a href="<?php echo home_url(); ?>" class="d-flex align-items-center pb-3">
             <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-small-sans-fond-charles_cantin.png" alt="logo" class="my-2" style="width: 150px;">
@@ -78,7 +77,7 @@
     <!-- affichage du HEADER -->
 
     <!-- affichage du CONTENU -->
-    <section class="container-lg gx-0 d-flex justify-content-center align-items-center h-100" id="content-heroe">
+    <section class="container-lg d-flex justify-content-center align-items-center h-100" id="content-heroe">
       <div class="text-center py-5 px-3">
         <h1 class="d-inline-flex px-0 mb-0"><?php the_field('page_titre_accueil') ?></h1><span>,</span>
         <h2><?php the_field('page_chapeau'); ?></h2>
@@ -88,9 +87,9 @@
 
     <!-- affichage du FOOTER -->
     <div class="container-fluid">
-      <footer class="container-lg gx-0 px-2 py-3 d-flex flex-column flex-sm-row justify-content-sm-between align-items-center">
+      <footer class="container-lg px-2 py-3 d-flex flex-column flex-sm-row justify-content-sm-between align-items-center">
         <div class="d-flex align-items-center">
-          <a href="<?php echo home_url(); ?>" class="me-2 text-muted text-decoration-none ">
+          <a href="<?php echo home_url(); ?>" class="me-2 text-decoration-none ">
             <i class="bi bi-camera mx-1"></i>
             <span style="font-family: Nova Mono, monospace;"><?php bloginfo('name'); ?></span>
           </a>
@@ -101,8 +100,8 @@
           <i class="bi bi-tools"></i>
         </div>
         <div class="d-flex mt-2 mt-sm-0">
-          <a class="text-muted text-decoration-none" href="<?php echo admin_url(); ?>">
-            <span class="me-1">Admin.</span>
+          <a class="text-decoration-none" href="<?php echo admin_url(); ?>">
+            <span class="small me-1">Admin.</span>
             <i class="bi bi-box-arrow-in-right"></i>
           </a>
         </div>

@@ -102,11 +102,11 @@ hr {
   background-color: var(--gris);
 }
 
-footer a {
+footer a, #heroe>div>footer a{
   color: var(--blanc);
   opacity: 0.55;
 }
-footer a:hover {
+footer a:hover,  #heroe>div>footer a:hover {
   color: var(--blanc2);
   opacity: 0.75;
 }
