@@ -8,7 +8,7 @@
 <?php get_header(); ?>
 
 <main>
-  <section class="container-lg gx-0">
+  <section class="container-lg">
     <!-- Affichage du CHAPEAU -->
     <div class="row text-center px-2 py-5 mb-md-3">
       <h2 class="col col-md-8 mx-auto lead"><?php the_field('page_chapeau'); ?></h2>

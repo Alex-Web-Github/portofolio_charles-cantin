@@ -101,6 +101,16 @@ hr {
 #banner {
   background-color: var(--gris);
 }
+
+footer a {
+  color: var(--blanc);
+  opacity: 0.55;
+}
+footer a:hover {
+  color: var(--blanc2);
+  opacity: 0.75;
+}
+
 /*****  CUSTOM GLOBAL *****/
 
 /*****  CUSTOM Page GALERIE *****/

@@ -62,8 +62,8 @@
     </nav>
 
     <!-- affichage de la Bannière -->
-    <section class="container-lg gx-0 my-2 mt-md-5" id="banner">
-      <div class="text-center py-4 px-3">
+    <section class="container-lg my-2 mt-md-5" id="banner">
+      <div class="text-center py-4">
         <h1><?php the_title(); ?></h1>
         <hr>
       </div>

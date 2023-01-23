@@ -8,10 +8,10 @@
 <?php get_header(); ?>
 
 <main>
-  <section class="container-lg gx-0">
+  <section class="container-lg">
     <!-- Affichage du chapeau -->
     <div class="row text-center px-2 py-5 mb-md-3">
-      <h2 class="col col-md-8 mx-auto lead"><?php the_field('page_chapeau'); ?></h2>
+      <h2 class="col col-md-8 mx-0 lead"><?php the_field('page_chapeau'); ?></h2>
     </div>
     <!-- Affichage du chapeau -->
     <?php
@@ -61,7 +61,7 @@
 
         <?php endwhile; ?>
         <!-- end of the loop -->
-        <?php wp_reset_postdata(); ?> // Utile pour réinitialiser '$post' à la fin de la boucle WPQuery
+        <?php wp_reset_postdata(); ?> <!-- Utile pour réinitialiser '$post' à la fin de la boucle WPQuery -->
 
       <?php else : ?>
         <p><?php echo 'Désolé, aucune prestation n\'est définie'; ?></p>
