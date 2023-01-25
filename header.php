@@ -46,11 +46,11 @@
           <!-- affichage du Social ICONS -->
           <ul class="navbar-nav flex-row">
             <li class="px-2">
-              <a class="text-muted" href="" target="_blank">
+              <a class="text-muted" href="#" target="_blank">
                 <i class="bi bi-instagram"></i></a>
             </li>
             <li class="px-2">
-              <a class="text-muted" href="" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a class="text-muted" href="#" target="_blank"><i class="bi bi-facebook"></i></a>
             </li>
           </ul>
           <!-- affichage du Social ICONS -->
