@@ -13,7 +13,7 @@ This is a minimum Bootstrap 5 WordPress starter theme :
 * custom wp_nav_menu walker for Bootstrap 5 navbar (in function.php from /functions/navbar.php)
 * empty custom.css & custom.js files (located in /css and /js, respectively)
 
-Déployement sur le serveur de Production (en ligne):
+Déploiement sur le serveur de Production (en ligne):
 
 * Depuis l'administration de votre Hébergeur (Cpanel ou équivalent) : activez un certificat Let's Encrypt puis Installer un site WP vierge.
 
