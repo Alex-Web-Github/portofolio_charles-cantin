@@ -1,5 +1,6 @@
 # Project Title: "Portofolio de Charles Cantin, Photographe"
-# URL : http://sc4foal9574.universe.wf/charles-cantin/
+![cover](https://github.com/Alex-Web-Github/portofolio_charles-cantin/blob/3757bd5d9fffb6dc452538d6f3e17e7e62c8f91c/capture-ecran-CharlesCantin.png)
+URL : http://sc4foal9574.universe.wf/charles-cantin/
 
 WP Theme created for an exercise during my formation of Web Developper at Studi-Digital School.
 
